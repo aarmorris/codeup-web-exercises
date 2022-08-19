@@ -33,7 +33,7 @@
 // alert("Your total is now " + total);
 // let userInput = "";
 // while (userInput !== "stop"){
-//     userInput = prompt("Emter the price of your next item:");
+//     userInput = prompt("Enter the price of your next item:");
 //         if(userInput) === "stop"){
 //         alert("Your final total is " + total);
 //     } else {
@@ -64,9 +64,47 @@
 // } while (guess !== number);
 // alert(`Your guess of ${guess} matches the number ${number}!`);
 
-let allCones = Math.floor(Math.random() * 50) + 50;
-let customer;
-console.log(customer);
-do{
-    console.log(Math.floor(Math.random() * 5 + 1));
-} while (allCones < 0);
+// let allCones = Math.floor(Math.random() * 51) + 50;
+//
+// do {
+//     let conesWanted = Math.floor(Math.random() * 5) + 1;
+//
+// if (conesWanted > allCones){
+//             console.log(`Cannot sell you ${conesWanted} I only have ${allCones}`);
+//         } else {
+//             console.log(`${conesWanted} sold....`);
+//             allCones = allCones - conesWanted;
+//         }
+//         console.log(`${allCones} left`);
+// } while (allCones > 0);
+//          console.log("Yay sold them all!");
+
+// This is the loop control variable
+// initialize it to a starting value
+// let count = 100;
+// // check the value of the loop control variable in a conditional test
+// while (count >= 0){
+//     console.log(count);
+// // change the value of the loop control variable
+//     count = count -1;
+// }
+//
+// for(let count = 100; count >= 0; count = counnt - 1){
+//         console.log(count);
+// }
+
+// for( let i = 100; i >= 0; i--){
+//     console.log(i);
+// }
+
+// let i = 0;
+// while (i < 100){
+//     console.log(i);
+//     i++;
+// }
+
+// for (i = 0; i < 100; i++){
+//     console.log(i);
+// }
+//
+// console.log ("Outside the loop: " + i);
