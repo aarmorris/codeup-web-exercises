@@ -11,20 +11,23 @@
      * console.log planetsArray to check your work
      */
     planetsArray = planetsString.split("|")
-     console.log(planetsArray);
+     //console.log(planetsArray);
 
     /**
      * TODO:
      * Create a string with <br> tags between each planet. console.log() your
      * results. Why might this be useful?
      */
-        let ;
-        console.log(planetsArray);
+
+      let planetsWithBreaks = planetsArray.join('<br>');
+        console.log(planetsWithBreaks);
     /**
      * BONUS:
      * Create another string that would display your planets in an undordered
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
-
+        let planetsList = planetsArray.join("</li><li></li>");
+            planetsList = "<li><li></li>" + planetsList + "</li></ul>';
+                planetsDiv.innerHTMl += planetsList;
 })();

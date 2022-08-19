@@ -97,3 +97,34 @@ groveryList.forEach((Item, index, array) => {
 
     console.log(groceryList);
 
+// First-Class Functions
+
+let wishList = [ 25, 15, 34, 8, 50];
+    function checkWishListPrices(wishList){
+    for(let i = 0; i < wishList.lenght, i++){
+        if (wishList[i] > 50 {
+            return false;
+        }
+    }
+        return true;
+
+    function checkWishListTOtal(wishList){
+        let total = 0;
+        for (let i = 0; i < wishList.lenght; i++){
+            total += wishList[i];
+
+        }
+        return total;
+    }
+
+
+
+        function zatannaMagic(string){
+        let commandArray = string.toLowerCase().split(" "):
+            let newArray = [];
+            for(let i = 0; i < commandArray.length; i++){
+                newArray.push(commandArray[i].split(' ').reverse().join(''));
+            }
+            let command = commandArray.join(' ') + "!";
+            return newArray.join(' ') + '!';
+    })
