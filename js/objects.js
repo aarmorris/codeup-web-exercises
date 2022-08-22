@@ -1,3 +1,5 @@
+
+
 (function() {
     "use strict";
 
@@ -11,16 +13,27 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
+        let person = {
+            firstName: "Aaron",
+            lastName: "Morris",
+            sayHello: function(person) {
+            return (`Hello and good afternoon from ${this.firstName} ${this.lastName}`);
+        }
+    }
+        console.log(person.firstName)
+        console.log(person.lastName)
+        console.log(person.sayHello());
+        
+        /**
+         * TODO:
+         * Add a sayHello method to the person object that returns a greeting using
+         * the firstName and lastName properties.
+         * console.log the returned message to check your work
+         *
+         * Example
+         * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
+         */
 
-    /**
-     * TODO:
-     * Add a sayHello method to the person object that returns a greeting using
-     * the firstName and lastName properties.
-     * console.log the returned message to check your work
-     *
-     * Example
-     * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
-     */
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -79,7 +92,16 @@
      *      ---
      *      ...
      */
+        let books = [
+            {title: "Book1", author: {firstName: "firstname", lastName: "lastname"}},
+            {title: "Book2", author: {firstName: "firstname", lastName: "lastname"}},
+            {title: "Book3", author: {firstName: "firstname", lastname: "lastname"}},
+            {title: "Book4", author: {firstName: "firstname", lastname: "lastname"}},
+            {title: "Book5", author: {firstName: "firstname", lastname: "lastname"}},
 
+]
+        for(let i = 0; i < books.length; i++){
+            console.log(`Name of title ${books[i].title} name of author ${books.firstName} ${books.lastName}`)};
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -92,3 +114,4 @@
      */
 
 })();
+

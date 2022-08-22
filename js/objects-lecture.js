@@ -43,68 +43,101 @@
 
 // Let's create a controller object to handle anything players or game objects do that affects the state of the game.  The controller might handle taking user input and calculating the input's effect on the game.
 
-let fighter = {
-    name: "Arata",
-        hitPoints: 18,
-        maxDamage: 8
-}
-
-let monster = {
-    name: "Goblin",
-    hitPoints: 8,
-    maxDamage: 6
-}
-
-
-
-
-let controller = {
-    attack: function(attacker, defender){
-        let defenderHPBeforeAttack = defender.hitPoints;
-        let damage = Math.ceil(Math.random() * attacker.maxDamage);
-        defender.hitPoints -= damage;
-        view.displayAttackResults(attacker, defender, defenderHPBeforeAttack, damage);
-    }
-}
+// let fighter = {
+//     name: "Arata",
+//         hitPoints: 18,
+//         maxDamage: 8
+// }
+//
+// let monster = {
+//     name: "Goblin",
+//     hitPoints: 8,
+//     maxDamage: 6
+// }
+//
+//
+//
+//
+// let controller = {
+//     attack: function(attacker, defender){
+//         let defenderHPBeforeAttack = defender.hitPoints;
+//         let damage = Math.ceil(Math.random() * attacker.maxDamage);
+//         defender.hitPoints -= damage;
+//         view.displayAttackResults(attacker, defender, defenderHPBeforeAttack, damage);
+//     }
+// }
 
 // The view object handles output
 
-let view = {
-    displayAttackResults: function(attacker, defender, defenderHPBeforeAttack, damage){
-        console.log(`${defender.name} has ${defenderHPBeforeAttack} hit points`);
-        console.log(attacker.name + " attacks!");
-        console.log(`${attacker.name} does ${damage} hit points of damage!`);
-        console.log(`${defender.name} now has ${defenderHPBeforeAttack - damage} hit points.`);
-        console.log("-----------------");
-    }
-}
+// let view = {
+//     displayAttackResults: function(attacker, defender, defenderHPBeforeAttack, damage){
+//         console.log(`${defender.name} has ${defenderHPBeforeAttack} hit points`);
+//         console.log(attacker.name + " attacks!");
+//         console.log(`${attacker.name} does ${damage} hit points of damage!`);
+//         console.log(`${defender.name} now has ${defenderHPBeforeAttack - damage} hit points.`);
+//         console.log("-----------------");
+//     }
+// }
+//
+// let model = {
+//     fighter: {
+//         name: "Arata",
+//         hitPoints: 18,
+//         maxDamage: 8
+//     },
+//
+//     monster: {
+//         name: "Goblin",
+//         hitPoints: 8,
+//         maxDamage: 6
+//     }
+// }
 
-let model = {
-    fighter: {
-        name: "Arata",
-        hitPoints: 18,
-        maxDamage: 8
-    },
+// // fighter.attack(monster);
+// // fighter["attack"](monster);
+//
+// controller.attack(model.fighter, model.monster);
+// controller.attack(model.monster, model.fighter);
+//
+//
+// // fighter.attack(monster);
+// // fighter["attack"](monster);
+//
+// controller.attack(fighter, monster);
+// controller.attack(monster, fighter);
+//
+// // Creatihg objects
+// // define an empty obeject and create properties dynamically
+// let goblin = {};
+// goblin.name = "Goblin";
 
-    monster: {
-        name: "Goblin",
-        hitPoints: 8,
-        maxDamage: 6
-    }
-}
+// create a function that returns objects
 
-// fighter.attack(monster);
-// fighter["attack"](monster);
+// function makeMonster(name, hitPoints, maxDamage){
+//     return {
+//         name: name,
+//         hitPoints: hitPoints,
+//         maxDamage: maxDamage
+//     }
+// }
+//
+// model.hobgoblin = makeMonster("Hobgoblin", 11, 11);
+// controller.attack(model.hobgoblin, model.fighter);
+//
+// // use an object constructor
+//
+// function Monster(name, hitPoints, maxDamage){
+//     this.name = name;
+//     this.hitPoints =  hitPoints;
+//     this.maxDamage = maxDamage;
+// }
+//
+// model.hobgoblinCaptain = new Monster("Hobgoblin Captain", 39, 14);
+//
+// controller.attack(model.hobgoblinCaptain, model.fighter);
+//
 
-controller.attack(model.fighter, model.monster);
-controller.attack(model.monster, model.fighter);
 
-
-// fighter.attack(monster);
-// fighter["attack"](monster);
-
-controller.attack(fighter, monster);
-controller.attack(monster, fighter);
 
 // Arrays of objects
 
@@ -152,7 +185,6 @@ controller.attack(monster, fighter);
 // ];
 //
 // console.log("The temperature in " + texasInfo[1].city + " is " + texasInfo[1].currentWeather.temp);
-
 
 
 
