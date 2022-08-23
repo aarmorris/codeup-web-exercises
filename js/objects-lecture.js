@@ -187,6 +187,29 @@
 // console.log("The temperature in " + texasInfo[1].city + " is " + texasInfo[1].currentWeather.temp);
 
 
+// Objects Destructurings
+
+const car = {
+    make: "Toyata",
+    model: "Tacoma",
+    year: 2019,
+    mileage: 12657
+}
+//
+// let make = car.make;
+// let carmodel = car.model;
+//
+// console.log(carModel);
+// cnosle.log(make);
+
+const {model, make, year, mileage} = car;
+console.log(make);
+console.log(model);
+console.log(year);
+console.log(mileage);
+
+const outputCarInfo = ({make, model, year, mileage} = car) => {console.log(`${year} ${make} ${model} with ${mileage}`)}
+outputCarInfo(car);
 
 
 
