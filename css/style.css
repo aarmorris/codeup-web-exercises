@@ -2,3 +2,53 @@
     color: purple; /* single line comment */
     text-decoration: underline;
 }
+
+h1 { text-align: center }
+
+#changes h2 {
+    color: darkcyan;
+    text-decoration: underline;
+}
+
+body {
+    background-color: papayawhip;
+    background-image: url("../img/papertexture.webp");
+    background-position: 35% 75%;
+    background-size: 1920px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+element { font-family: Helvetica, Arial, JosefinSans; }
+
+p {
+    font-family: Arial
+}
+
+table {
+    table-layout: fixed;
+    width: 405px;
+    border: 2px solid black;
+}
+
+td {
+    border: 1px solid gray;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+a:hover {    /* mouse over link */
+    color: darkgreen;
+    border-bottom: none;
+}
+
+a:visited {    /* visited link */
+    color: sandybrown;
+}
