@@ -6,3 +6,53 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 
+p.a {
+    padding: .5em 1em;
+    background-color: #a2c1e5;
+    border-color: silver;
+    box-shadow: 1px 1px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: lighter;
+    color: #416bbb;
+}
+
+p.b{
+    padding: .5em 1em;
+    background-color:palegreen;
+    border-color: silver;
+    box-shadow: 1px 1px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: lighter;
+    color: mediumseagreen;
+
+}
+
+p.c{
+    padding: .5em 1em;
+    background-color:lightyellow;
+    border-color: silver;
+    box-shadow: 1px 1px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: lighter;
+    color: goldenrod;
+
+}
+
+p.d{
+    padding: .5em 1em;
+    background-color:pink;
+    border-color: silver;
+    box-shadow: 1px 1px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: lighter;
+    color: darkred;
+
+}
