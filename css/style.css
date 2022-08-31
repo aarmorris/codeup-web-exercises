@@ -14,7 +14,8 @@ body {
     background-color: papayawhip;
     background-image: url("../img/papertexture.webp");
     background-position: 35% 75%;
-    background-size: 1920px;
+    background-size: cover;
+
 }
 
 ul {
