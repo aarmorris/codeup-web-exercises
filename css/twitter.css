@@ -30,6 +30,7 @@ a {
     background: var(--light-bg);
     position: fixed;
     width: 100%;
+    z-index:1000;
 }
 .nav {
     padding: 0;
@@ -92,7 +93,7 @@ a {
 
 }
 
-profile-items{
+.profile-items{
 list-style: none;
     padding: 0;
 }
@@ -108,12 +109,13 @@ list-style: none;
 }
 
 .media-body {
-    width: calc(100% - 50%);
+    width: calc(100% - 15%);
 }
 
 .img-circle {
     border-radius: 100%;
     border: 4px solid var(--light-bg);
+    float: left;
 }
 
 .text-right{
@@ -128,12 +130,11 @@ list-style: none;
     width: 20%;
 }
 
-.media, hr.solid{
-    width: 100%;
+.media {
+    width: 95%;
     background-color: whitesmoke;
-    border-bottom: 1px;
     padding: .5em;
-    overflow: unset;
+    border-bottom: 3px solid lightgrey;
 
 
 }
@@ -154,3 +155,6 @@ profile-details{
     width: 25%;
 }
 
+.profile-entry{
+    margin: .5em;
+}
