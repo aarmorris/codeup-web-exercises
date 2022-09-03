@@ -30,7 +30,7 @@ a {
     background: var(--light-bg);
     position: fixed;
     width: 100%;
-    z-index:1000;
+    z-index:1;
 }
 .nav {
     padding: 0;
@@ -105,7 +105,8 @@ list-style: none;
 
 .media-image{
     width: 50px;
-    margin: 1.33em;
+    margin-top: 1.33em;
+    overflow: auto;
 }
 
 .media-body {
@@ -126,28 +127,24 @@ list-style: none;
     color: var(--main-link-color);
 }
 
-.who-to-follow{
-    width: 20%;
-}
 
 .media {
-    width: 95%;
-    background-color: whitesmoke;
+    width: 100%;
+    background-color: var(--light-bg);
     padding: .5em;
-    border-bottom: 3px solid lightgrey;
+    border-bottom: 1px solid var(--separator-color);
 
 
 }
 
-profile-details{
-    width: 25%;
-    margin-top: 0;
-    margin-right: .5em;
-    margin-left: .5em;
+profile-details, .timeline,  .who-to-follow {
+    width: calc(25% - 1em);
+    margin: 0 .5em;
+
 }
 
 .timeline{
-    width: 50%;
+    width: calc(50%);
 
 }
 
