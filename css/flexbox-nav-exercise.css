@@ -1,0 +1,25 @@
+nav{
+    display: flex;
+    background-color: rgb(193,193,193);
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+nav a:hover{
+    color: blue;
+
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+section:nth-of-type(2) {
+    font-family:
+}
