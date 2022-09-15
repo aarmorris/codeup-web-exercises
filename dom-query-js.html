@@ -29,25 +29,52 @@
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-         let mainHeader = document.getElementById(Hello World!);
+        let mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        mainHeader.innerHTML = "JavaScript is Cool"
+
 
         // TODO: Uncomment the next line and get the sub header element by id
-        // var subHeader = ;
+        let subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
+        subHeader.style.color = "blue";
 
         // TODO: Uncomment the next line and get all list items
-        // var listItems = ;
+        let listItems = document.getElementsByTagName('li');
 
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
 
+        {
+            for (let i = 0; i < listItems.length; i++) {
+                let dbid = listItems[i].getAttribute('data-dbid');
+                if (dbid == 1) {
+                    listItems[i].style.color = 'blue';
+                }  if (dbid % 2 == 0) {
+                    listItems[i].style.color = 'gray';
+                }
+            }
+        }
+                // let listItems = document.getElementsByTagName('li);
+                //     let listItems = document.querySelectorAll('li'); // modern way to select elements
+                //
+                //     listItems = Array.from(listItems);
+                //     listItems.forEach(function(listItem){
+                //         if (listItem.dataset.dbid === "1") {
+                //                 listItem.style.color = "blue";
+                //         }
+                //     });
+
+
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        // var subParagraphs = ;
+        let subParagraphs = document.getElementsByClassName("sub-paragraph");
+
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+            subParagraphs[0].innerHTML = 'Mission Accomplished!'
+
     })();
 </script>
 </body>
