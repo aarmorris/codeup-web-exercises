@@ -25,6 +25,11 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="btn1">Click Me!</button>
+<button id="btn2">Change Color</button>
+<button id="btn3">Item Color</button>
+<button id="btn4">Mission Accomplished</button>
+
 <script>
     (function() {
         "use strict";
@@ -32,22 +37,24 @@
         let mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool"
-
+            let changeText = function () {
+                mainHeader.innerHTML = "JavaScript is Cool"
+            }
 
         // TODO: Uncomment the next line and get the sub header element by id
         let subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
-
+            function changeColor() {
+                subHeader.style.color = "blue";
+            }
         // TODO: Uncomment the next line and get all list items
         let listItems = document.getElementsByTagName('li');
 
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
 
-        {
+            function changeColorOdd() {
             for (let i = 0; i < listItems.length; i++) {
                 let dbid = listItems[i].getAttribute('data-dbid');
                 if (dbid == 1) {
@@ -73,9 +80,24 @@
 
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        let missionAccomplish = function () {
             subParagraphs[0].innerHTML = 'Mission Accomplished!'
+        }
+        let buttonOne = document.getElementById('btn1');
+            btn1.addEventListener('click', changeText);
+
+        let buttonTwo = document.getElementById('btn2');
+            btn2.addEventListener('click', changeColor);
+
+        let buttonThree = document.getElementById('btn3');
+            btn3.addEventListener('click', changeColorOdd );
+
+        let buttonFour = document.getElementById('btn4');
+            btn4.addEventListener('click', missionAccomplish);
+
 
     })();
 </script>
 </body>
 </html>
+
