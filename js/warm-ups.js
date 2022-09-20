@@ -186,36 +186,36 @@
 // console.log(convertToObject("Intro to Programming", 20));
 
 
-const attendance = {
-    miami: 32789,
-    buffalo: 45678
-    protland: 24567
-
-}
+// const attendance = {
+//     miami: 32789,
+//     buffalo: 45678
+//     protland: 24567
+//
+// }
 
 // Given the attendance object, write a function that returns the total attendance across all teams.
 
-function totalAttendance(attendanceObject) {
-    let attendanceArray = Object.values(attendanceObject);
-    let total = 0;
-    for (let i = 0; i < attendanceArray.length; i++) {
-        total += attendanceArray[i];
-    }
-
-    return total;
-}
-
-function totalAttendance(attendanceObject){
-    let total = 0;
-    for (cost prop in attendance){
-        total += attendance[prop];
-    }
-    return total;
-}
-
-for (const prop in attendance){
-    console.log(attendance[prop]);
-}
+// function totalAttendance(attendanceObject) {
+//     let attendanceArray = Object.values(attendanceObject);
+//     let total = 0;
+//     for (let i = 0; i < attendanceArray.length; i++) {
+//         total += attendanceArray[i];
+//     }
+//
+//     return total;
+// }
+//
+// function totalAttendance(attendanceObject){
+//     let total = 0;
+//     for (cost prop in attendance){
+//         total += attendance[prop];
+//     }
+//     return total;
+// }
+//
+// for (const prop in attendance){
+//     console.log(attendance[prop]);
+// }
 
 // Given the attendance object, write a function that returns the average attenadance
 
@@ -223,13 +223,13 @@ for (const prop in attendance){
 
 // Given the attendance object, write a function that returns an object with totalAttendance and averageAttendance properties set to the correct values
 
-function totalAttendance(attendanceObject){
-    let total = 0;
-    for (cost prop in attendance){
-        total += attendance[prop];
-    }
-    return total/Object.keys(attendance).length;
-}
+// function totalAttendance(attendanceObject){
+//     let total = 0;
+//     for (cost prop in attendance){
+//         total += attendance[prop];
+//     }
+//     return total/Object.keys(attendance).length;
+// }
 
 
 // Given the attendance object, write a function that returns the total attendance across all teams.
@@ -248,3 +248,79 @@ function totalAttendance(attendanceObject){
 //  * convertToNumber({ piano: "200", tv: "300" }) ➞ { piano: 200, tv: 300 }
 //  * convertToNumber({ piano: "200", tv: "300", stereo: "400" }) ➞ { piano: 200, tv: 300, stereo: 400 }
 //  */
+
+/**
+ * Convert Address to Object
+ * Write a function named convertAddressToObject that accepts a string that contains a street number (as a string) and street name separated by a space character, and returns an object with properties streetNumber and streetName.
+ *
+ * Examples
+ *
+ * >> convertAddressToObject('8646 Sunny Oaks') ➞ {streetNumber: '8646', streetName: 'Sunny Oaks'}
+ * >> convertAddressToObject('5408 Villa Nueva') ➞ {streetNumber: '5408', streetName: 'Villa Nueva'}
+ **/
+
+// Both of these functions will work for the exercise above.
+    
+// let address = "8646 Sunny Oaks";
+//
+// function convertAddressToObject(addressString){
+//     return {
+//         streetNumber: addressString.substring(0, addressString.indexOf('')),
+//         streetName: addressString.substring(addressString.indexOf('') + 1)
+//     }
+//
+// }
+
+// function converAddressToObject(addressString){
+//     let addressArray = addressString.split('');
+//     return {
+//         streetNumber: addresssArray[0],
+//         streetName: addressArray.slice(1, addressArray.length). join('')
+//     }
+// }
+
+
+// -------------->
+
+
+/**
+ * Count total pets
+ * Write a function named totalPets that accepts an array of objects where each object represents a person, and has a 'pets' property for their owned pets. The function should return the sum of every object's numPets property.
+ *
+ * Examples
+ *
+ * >> totalPets([
+ *       {name: 'Fernando Mendoza', pets: 1},
+ *       {name: 'Douglas Hirsh', pets: 8},
+ *       {name: 'Kenneth Howell', pets: 2}
+ *    ]) ➞ 11
+ */
+
+let peopleAndPets = [
+    {name: 'Fernando Mendoza', pets: 1},
+    {name: 'Douglas Hirsh', pets: 8},
+    {name: 'Kenneth Howell', pets: 2}
+]
+
+function totalPets(arrayOfObjects){
+    for (let i = 0; i < arrayOfObjects.length; i++){
+        total += arrayOfObjects[i].pets;
+    }
+        return total;
+}
+
+function totalPets(arrayOfObjects){
+    let total = 0;
+    arrayOfObjects.forEach(function(object){
+        
+    });
+    return total;
+}
+
+// -------> Future code down below that will be learned in later lessons
+
+function totalPets(arrayOfObjects){
+    return arrayOfObjects.reduce(function(acc, currentValue){
+        
+    }, 0)
+}
