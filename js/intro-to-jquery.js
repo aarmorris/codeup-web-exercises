@@ -14,6 +14,10 @@
 //
 // window.onload = init;
 
-// window.onload = function() {
-//     alert( 'The page has finished loading!' );
-// }
+$(".framework").css({
+    'border': '1px solid blue',
+    'width': 'fit-content'
+});
+
+$("li").css("font-size", "20px");
+$('',"h1", "p", "li").css("background-color","#FFFF00");
