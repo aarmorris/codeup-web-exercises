@@ -30,5 +30,31 @@
             "tool"
         ],
         "price": 10
+
+    },  {
+
+
+        "title": "Cicular Saw",
+        "quantity": 1,
+        "categories": [
+            "tool",
+            "powered"
+        ],
+        "price": 699
+
+    },  {
+
+
+
+    "title": "Tool Chest Cabinet",
+    "quantity": 1,
+    "categories": [
+        "tool",
+        "storage"
+    ],
+    "price": 1198
+
     }
+
 ]
+
