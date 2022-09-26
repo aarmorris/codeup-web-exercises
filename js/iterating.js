@@ -1,3 +1,5 @@
+
+
 let names = [ "Julia", "Bob", "Harry", "Joe"];
 
 //names.forEach(function(names){
@@ -18,7 +20,7 @@ function firstItemArray(names){
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */ 
-        let names = ["Julia", "Bob", "Harry", "Joe"];
+        // let names = ["Julia", "Bob", "Harry", "Joe"];
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
