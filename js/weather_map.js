@@ -67,27 +67,46 @@ function formatTime(timeStamp){
     return formattedDateTime;
 }
 
-$.get("http://api.openweathermap.org/data/2.5/forecast", {
-    APPID: OPEN_WEATHER_APPID,
-    lat:    29.423017,
-    lon:   -98.48527,
-}).done(function(data) {
-    console.log("forecasts:");
-    console.log(formatTime(data.list[0].dt));
-   console.log(data.list)
-});
+// $.get("http://api.openweathermap.org/data/2.5/forecast", {
+//     APPID: OPEN_WEATHER_APPID,
+//     lat:    29.423017,
+//     lon:   -98.48527,
+// }).done(function(data) {
+//     console.log("forecasts:");
+//     console.log(formatTime(data.list[0].dt));
+//    console.log(data.list)
+// });
+//
+// $.get("http://api.openweathermap.org/data/2.5/weather", {
+//     APPID: OPEN_WEATHER_APPID,
+//     lat:    29.423017,
+//     lon:   -98.48527,
+//     units: "imperial"
+// }).done(function(data) {
+//     console.log("current weather");
+//     console.log(data);
+//     console.log(data.main.temp);
+//     console.log(data.wind.speed);
+//     console.log(windCardinalDirection(data.wind.deg));
+//     $('body').append(`<p> The current temperature is ${data.main.temp}</p>`);
+//
+// });
 
-$.get("http://api.openweathermap.org/data/2.5/weather", {
+$.get("http://api.openweathermap.org/data/2.5/forecast", {
     APPID: OPEN_WEATHER_APPID,
     lat:    29.423017,
     lon:   -98.48527,
     units: "imperial"
 }).done(function(data) {
-    console.log("current weather");
-    console.log(data);
-    console.log(data.main.temp);
-    console.log(data.wind.speed);
-    console.log(windCardinalDirection(data.wind.deg));
-    $('body').append(`<p> The current temperature is ${data.main.temp}</p>`);
-
+    data.list.forEach((forecast, i) => {
+        if (i % 8 == 0) {
+            $(`.card`).append(`<div class="card"><p>Current Date</p>
+        
+                    <p>Current Temperature</p>
+                    <p>Description</p>
+                    <p>Humidity</p>
+                    <p>Wind</p>
+                    <p>Pressure</p></div>`)
+        }
+    });
 });
