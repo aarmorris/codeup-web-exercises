@@ -1,7 +1,7 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*align-items: flex-start;*/
     height: 100vh;
     margin: 0;
     background-image: url('https://source.unsplash.com/1600x900/?landscape');
@@ -56,4 +56,37 @@ input.search-bar {
 h1.temp{
     margin: 0;
 }
+
+#forecast-1, #forecast-2, #forecast-3, #forecast-4, #forecast-5{
+    border: none;
+    width: calc(100% - 12px);
+    justify-content: flex-start;
+    overflow: scroll;
+    scrollbar-width: none;
+    margin-top: 10em;
+
+
+
+}
+
+#forecast-cards{
+    align-self: flex-end;
+    display: flex;
+    margin-left: 20em;
+
+}
+
+#map {
+    width: 650px;
+    height: 330px;
+    border-radius: 1400px / 700px;
+}
+
+.icon{
+    ;
+    color:white;
+}
+/*#forecast1::-webkit-scrollbar {*/
+/*    display:none;*/
+/*}*/
 

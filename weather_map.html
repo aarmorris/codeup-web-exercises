@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <script src="js/keys.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-<!--    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>-->
-<!--    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -14,23 +14,70 @@
     <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <body>
+<div class="d-flex">
 <div class="card">
     <div class="search">
-        <input type="text" class="search-bar" placeholder="Search">
-        <button><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
+        <input type="text" class="search-bar" id="geo-bar" placeholder="Search">
+        <button id="geo-button"><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
             <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
         </svg></button>
     </div>
+
     <div class="weather">
         <h2 class="city">Weather in </h2>
-        <h1 class="temp">81°C</h1>
-        <img src="" alt="" class="icon" />
+        <h1 class="temp">81°F</h1>
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="3.5em" height="3.5em" fill="currentColor" class="bi bi-clouds" viewBox="0 0 16 16">
+            <path d="M16 7.5a2.5 2.5 0 0 1-1.456 2.272 3.513 3.513 0 0 0-.65-.824 1.5 1.5 0 0 0-.789-2.896.5.5 0 0 1-.627-.421 3 3 0 0 0-5.22-1.625 5.587 5.587 0 0 0-1.276.088 4.002 4.002 0 0 1 7.392.91A2.5 2.5 0 0 1 16 7.5z"/>
+            <path d="M7 5a4.5 4.5 0 0 1 4.473 4h.027a2.5 2.5 0 0 1 0 5H3a3 3 0 0 1-.247-5.99A4.502 4.502 0 0 1 7 5zm3.5 4.5a3.5 3.5 0 0 0-6.89-.873.5.5 0 0 1-.51.375A2 2 0 1 0 3 13h8.5a1.5 1.5 0 1 0-.376-2.953.5.5 0 0 1-.624-.492V9.5z"/>
+        </svg></div>
         <div class="description">Cloudy </div>
-        <div class="humidity">Humidity 60%</div>
+        <div class="humidity">Humidity: 60%</div>
         <div class="wind">Wind speed:  km/h</div>
-        <div class="pressure">Pressure: 1050</div>
+        <div class="pressure">Pressure: </div>
     </div>
 </div>
+    <div id='map' class="mx-auto mt-4 opacity-75"></div>
+</div><br>
+<div id="forecast-cards">
+    <div id="forecast-1" class="card border-primary mb-3" style="width:15rem; height:7rem;">
+    <div class="card-date">Header</div>
+    <div class="card-minMax text-primary">Min & Max Temp</div>
+        <div class="weather-icon">Primary card title</div>
+        <div class="description">Cloudy </div>
+        <div class="humidity">Humidity: 60%</div>
+        <div class="wind">Wind speed:  km/h</div>
+        <div class="pressure">Pressure: </div>
+    </div>
+    <div id="forecast-2" class="card border-primary mb-3" style="width:15rem; height:7rem;">
+        <div class="card-date">Header</div>
+        <div class="card-minMax text-primary">Min & Max Temp</div>
+        <div class="weather-icon">Primary card title</div>
+        <div class="description">Cloudy </div>
+        <div class="humidity">Humidity: 60%</div>
+        <div class="wind">Wind speed:  km/h</div>
+        <div class="pressure">Pressure: </div>
+    </div>
+        <div id="forecast-3" class="card border-primary mb-3" style="width:15rem; height:7rem;">
+            <div class="card-date">Header</div>
+            <div class="card-minMax text-primary">Min & Max Temp</div>
+            <div class="weather-icon">Primary card title</div>
+            <div class="description">Cloudy </div>
+            <div class="humidity">Humidity: 60%</div>
+            <div class="wind">Wind speed:  km/h</div>
+            <div class="pressure">Pressure: </div>
+        </div>
+        <div id="forecast-4" class="card border-primary mb-3" style="width:15rem; height:7rem;">
+            <div class="card-date">Header</div>
+            <div class="card-minMax text-primary">Min & Max Temp</div>
+            <div class="weather-icon">Primary card title</div>
+            <div class="description">Cloudy </div>
+            <div class="humidity">Humidity: 60%</div>
+            <div class="wind">Wind speed:  km/h</div>
+            <div class="pressure">Pressure: </div>
+        </div>
+
+</div>
+
 
 
 
