@@ -2,33 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Weather Map</title>
     <script src="js/keys.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
+<!--    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>-->
+<!--    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script src="js/mapbox-geocoder-utils.js"></script>
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <body>
-
-
-<div id='map' style='width: 400px; height: 300px;'></div>
-<script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYWFybW9ycmkiLCJhIjoiY2w4ZXBqZzhtMDVmOTNvbnpxbml5N2o4cyJ9.n5GGNRFxy66LFGVgSfVfnA';
-    const map = new mapboxgl.Map({
-        container: 'map', // container ID
-        style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-74.5, 40], // starting position [lng, lat]
-        zoom: 9, // starting zoom
-        projection: 'globe' // display the map as a 3D globe
-    });
-    map.on('style.load', () => {
-        map.setFog({}); // Set the default atmosphere style
-    });
-</script>
-
-<div class="card" style="width: 18rem">
+<div class="card">
+    <div class="search">
+        <input type="text" class="search-bar" placeholder="Search">
+        <button><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
+            <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
+        </svg></button>
+    </div>
+    <div class="weather">
+        <h2 class="city">Weather in </h2>
+        <h1 class="temp">81°C</h1>
+        <img src="" alt="" class="icon" />
+        <div class="description">Cloudy </div>
+        <div class="humidity">Humidity 60%</div>
+        <div class="wind">Wind speed:  km/h</div>
+        <div class="pressure">Pressure: 1050</div>
+    </div>
 </div>
+
 
 
 <script src="js/jquery-3.6.1.min.js"></script>
