@@ -183,7 +183,7 @@ function getWeatherAndForecastData(coordinates){
         const lowTemp = data.list[index].main.temp_min;
 
         $(cardID).html(`
-        <div class="card-date"></div>
+        <div class="card-date">Header</div>
         <div class="card-minMax text-primary">${Math.floor(highTemp)}°F/${Math.floor(lowTemp)}°F</div>
         <div class="weather-icon">Primary card title</div>
         <div class="description">Cloudy </div>
