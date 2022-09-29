@@ -140,7 +140,12 @@ function getWeatherAndForecastData(coordinates){
         const temperature = data.main.temp;
         const highTemp = data.main.temp_max;
         const lowTemp = data.main.temp_min;
-
+        $(`.description-1`).html(`Description: ${weatherDescription}`);
+        $(`.wind-1`).html(`Wind speed: ${windSpeed} km/h` );
+        $(`.humidity-1`).html(`Humidity: ${humidity}%`);
+        $(`.pressure-1`).html(`Pressure: ${pressure}`);
+        $(`.temp-1`).html(`${Math.floor(temperature)}°F`);
+        $(`.card-minMax-1`).html(`${highTemp}°F/${lowTemp}°F`)
 
 
         // $(`.description`).html(`Description: ${weatherDescription}`);
@@ -161,8 +166,8 @@ function getWeatherAndForecastData(coordinates){
         console.log(data)
         const cityName = data.city.name;
         const timeStamp = data.list[0].dt;
-        $(`.city`).append(cityName);
-        $(`.card-date`).html(formatTime(timeStamp));
+        $(`.city-1`).html(`Weather in ${cityName}`);
+        $(`.card-date-1`).html(formatTime(timeStamp));
         //Data for Tomorrow Card Down below:
 
         renderCard(data, 8, "#forecast-1");
@@ -178,8 +183,8 @@ function getWeatherAndForecastData(coordinates){
         const lowTemp = data.list[index].main.temp_min;
 
         $(cardID).html(`
-        <div class="card-date">Header</div>
-        <div class="card-minMax text-primary">${highTemp}°F/${lowTemp}°F</div>
+        <div class="card-date"></div>
+        <div class="card-minMax text-primary">${Math.floor(highTemp)}°F/${Math.floor(lowTemp)}°F</div>
         <div class="weather-icon">Primary card title</div>
         <div class="description">Cloudy </div>
         <div class="humidity">Humidity: 60%</div>
@@ -210,12 +215,7 @@ function getWeatherAndForecastData(coordinates){
 //
 //
 //
-//     $(`.description`).html(`Description: ${weatherDescription}`);
-//     $(`.wind`).html(`Wind speed: ${windSpeed} km/h` );
-//     $(`.humidity`).html(`Humidity: ${humidity}%`);
-//     $(`.pressure`).append(pressure);
-//     $(`.temp`).html(`${Math.floor(temperature)}°F`);
-//     $(`.card-minMax`).html(`${highTemp}°F/${lowTemp}°F`)
+
 
 
 // });
@@ -248,6 +248,8 @@ function getWeatherAndForecastData(coordinates){
     // codeupMarker.setPopup(codeupPopup);
 
 
+
+
     let coords;
     function getCoords(address, token){
         geocode(address, token).then(function(coordinates){
@@ -269,6 +271,8 @@ function getWeatherAndForecastData(coordinates){
             // get weather data and forecast data with the new coordinates
 
             getWeatherAndForecastData(coordinates);
+            $(`#forecast-cards`).removeClass(`d-none`)
+
         });
     });
 });
