@@ -330,64 +330,64 @@
 
 // -- Write a function that takes in an input, does something to it, and returns the modified data (do a mathematical operation on it, do a string method to modify it, use an array method to modify an array)
 
-function doubleNumber(number){
-    return number * 2;
-}
-
-function upperCase(string){
-    return string.toUpperCase();
-}
-
-function repeatString(string){
-    return string.concat(' ', string);
-}
-
-const myArray = [1, 2, 3, 4, 5, 6];
-
-function removeFirstElement(array){
-    array.shift();
-    return array;
-}
-
-function moveFirstToLast(array){
-    let firstElement = array.shift();
-    array.push(firstElement);
-    return array;
-}
+// function doubleNumber(number){
+//     return number * 2;
+// }
+//
+// function upperCase(string){
+//     return string.toUpperCase();
+// }
+//
+// function repeatString(string){
+//     return string.concat(' ', string);
+// }
+//
+// const myArray = [1, 2, 3, 4, 5, 6];
+//
+// function removeFirstElement(array){
+//     array.shift();
+//     return array;
+// }
+//
+// function moveFirstToLast(array){
+//     let firstElement = array.shift();
+//     array.push(firstElement);
+//     return array;
+// }
 //
 // -- Write a function that takes in an array and returns the array modified in some way -- certain elements removed, certain elements modified in a regular way (example, every numerical value doubled, every string uppercased)
 //
 // -- Write a function that accepts an array of objects where each object has at least one property with a numeric value, be able to return the total or average of the numeric values
 //
 // -- Write a function that accepts a string, breaks down the string into components, and returns an object where each component of the string has become the value of a property
-
-let cityAndState = "Las Vegas, Nevada";
+//
+// let cityAndState = "Las Vegas, Nevada";
 
     // write a function that returns
 // { city: "Las Vegas",
 //   state: "Nevada"
 // }
 
-function cityStateObject(cityAndState){
-    return {
-        city: cityAndState.split(", ")[0],
-        state: cityAndState.split(", ")[1]
-    }
-}
-
-
+// function cityStateObject(cityAndState){
+//     return {
+//         city: cityAndState.split(", ")[0],
+//         state: cityAndState.split(", ")[1]
+//     }
+// }
+//
+//
 
 //
 // -- Write a function that analyzes a string, returning the results of the analysis, example, return the length of the string
 
-function analyzeString(string){
-    return{
-        length: string.length,
-        firstLetter: string.charAt(),
-        lastLetter: string.charAt(string.length -1)
-    };
-
-}
+// function analyzeString(string){
+//     return{
+//         length: string.length,
+//         firstLetter: string.charAt(),
+//         lastLetter: string.charAt(string.length -1)
+//     };
+//
+// }
 
 
 //
@@ -422,23 +422,23 @@ function analyzeString(string){
 //      *
 //      * Examples
 //      *
-            const students = [
-           {
-              id: 1,
-            name: "Jacek",
-            notes: [5, 3, 4, 2, 5, 5]
-          },
-          {
-            id: 2,
-              name: "Ewa",
-             notes: [2, 3, 3, 3, 2, 5]
-           },
-          {
-              id: 3,
-              name: "Zygmunt",
-              notes: [2, 2, 4, 4, 3, 3]
-            }
-          ]
+//             const students = [
+//            {
+//               id: 1,
+//             name: "Jacek",
+//             notes: [5, 3, 4, 2, 5, 5]
+//           },
+//           {
+//             id: 2,
+//               name: "Ewa",
+//              notes: [2, 3, 3, 3, 2, 5]
+//            },
+//           {
+//               id: 3,
+//               name: "Zygmunt",
+//               notes: [2, 2, 4, 4, 3, 3]
+//             }
+//           ]
 
         // function getStudentTopNotes (arrayOfStudentObject){
         //     const topNotes = [];
@@ -447,20 +447,20 @@ function analyzeString(string){
         //     });
         //     return topNotes;
         // }
-
-        function getStudentTopNotes(arrayOfStudentObjects) {
-            let topNotes = [];
-            for(let i = 0; i < arrayOfStudentObjects.length; i++){
-                let topNote = arrayOfStudentObjects[i].notes[0];
-                for (let j = 0; j < arrayOfStudentObjects[i].notes.length; j++){
-                    if (arrayOfStudentObjects[i].notes[j] > topNote){
-                        topNote = arrayOfStudentObjects[i].notes[j];
-                    }
-                }
-                topNotes.push(topNotes);
-            }
-            return topNotes;
-        }
+        //
+        // function getStudentTopNotes(arrayOfStudentObjects) {
+        //     let topNotes = [];
+        //     for(let i = 0; i < arrayOfStudentObjects.length; i++){
+        //         let topNote = arrayOfStudentObjects[i].notes[0];
+        //         for (let j = 0; j < arrayOfStudentObjects[i].notes.length; j++){
+        //             if (arrayOfStudentObjects[i].notes[j] > topNote){
+        //                 topNote = arrayOfStudentObjects[i].notes[j];
+        //             }
+        //         }
+        //         topNotes.push(topNotes);
+        //     }
+        //     return topNotes;
+        // }
 //
 //
 //     /**
@@ -505,3 +505,25 @@ function analyzeString(string){
 // Write a function that accepts an array of bowling scores and returns the highest
 //
 // Write a function that accepts an array of bowling scores and returns true if the highest score is divisible by 3
+
+/*================== DOM WARMUPS ===================================*/
+
+// When the user clicks the button that has the text "Change Heading", the
+// text of the <h1> element changes to read "I pwn the DOM"
+
+// Every time the user enters a character in the input with id "source", that
+// character appears in the <p> element with the id "output"
+
+$('button').on('click', function(){
+    $('h1').text("I pwn the DOM");
+});
+
+document.getElementById("button")[0].addEventListener('click', function(e){
+   document.getElementsByName("h1")[0].innerHTML = "I pwn the DOM"
+});
+
+// ============ Second Question =================//
+
+$("#source").on('keyup', function(){
+   $("#output").text($("#source").val);
+});

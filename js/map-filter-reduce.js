@@ -59,7 +59,7 @@ const cars = [
 ];
 
 const mileages = cars.map(car => car.mileage);
-console.log(mileages);
+// console.log(mileages);
 
 // const newObject = cars.map(car => {
 //    delete car.mileage;
@@ -82,7 +82,7 @@ function doubleTheArray(array){
 
 const under10K = cars.filter(car => car.mileage < 10000);
 
-console.log(under10K[0].mileage);
+// console.log(under10K[0].mileage);
 
 under10K.forEach(({make, model, mileage}, index) => {
    output += `<p>Car number ${index + 1}: I found a ${make} ${model} with ${mileage} miles</p>`;
@@ -107,14 +107,26 @@ const totalCost = prices.reduce(function(total, price){
    return total + price;
 });
 
-console.log(totalCost);
+// console.log(totalCost);
 
 // const prices = [32.99, 21.99, 6.99, 4.99, 12.99, 8.98, 5.99];
 
 // At index 0 it is like it does let total = array[0]
 
 let total = prices.reduce(function(total, itemPrice, index){
-   console.log(`The index is ${index}, the total is ${total}, the itemPrice is ${itemPrice}`);
+   console.log(`The index is ${index}, the total is ${total.toFixed(2)}, the itemPrice is ${itemPrice}`);
    return total + itemPrice;
 });
-$("#output").append(`<p>The total is ${totalCost}</p>`);
+// $("#output").append(`<p>The total is ${totalCost}</p>`);
+
+// the function passed to the reduce method takes an extra parameter, the accumulator
+//The accumulator is often abbreviated "acc"
+
+const averagePrice = prices.reduce((function(accumulator, current, index, array){
+   console.log(accumulator.toFixed(2));
+   accumulator += current;
+   if (index === array.length -1) {
+      return accumulator/array.length;
+   }
+   return accumulator;
+}));

@@ -35,7 +35,7 @@ const users = [
 // declared as `const`
 const name = 'Aaron Rashawn Morris';
 const email = 'aaron.r.morris3@gmail.com';
-const languages = [Javascript, Ruby, React, Julia, Sapphire];
+const languages = ["Javascript", "Ruby", "React", "Julia", "Sapphire"];
 
 // TODO: rewrite the object literal using object property shorthand
 users.push({
@@ -50,17 +50,20 @@ let names = [];
 
 // TODO: rewrite the following using arrow functions
 
-const sayHello = (name) => {
-  const greeting = 'Hello,  ' + name + '!';
-  return greeting;
-};
 
-users.forEach(function(user) {
-  return emails.push(user.email);
-});
-users.forEach(function(user) {
-  return names.push(user.name);
-});
+// users.forEach(function(user) {
+//   return emails.push(user.email);
+// });
+
+users.forEach((user) => emails.push(user.email));
+console.log(emails)
+
+users.forEach((user) => names.push(user.name));
+console.log(names)
+
+// users.forEach(function(user) {
+//   return names.push(user.name);
+// });
 
 // TODO: replace `var` with `let` in the following declaration
 let developers = [];
