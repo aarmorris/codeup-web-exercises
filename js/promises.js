@@ -127,9 +127,24 @@ function displayName(userName){
 };
 
 let GitHubPromise = displayName("aarmorris");
-    console.log(GitHubPromise);
     GitHubPromise.then(response => {
-    })
+        console.log(response);
+
+    });
+
+
+//    Jason's Promise Syntax
+// async function getUserLastCommitAsync(username) {
+//     try {
+//         let response = await fetch(`https://api.github.com/usersss/${username}`);
+//         let events = await response.json();
+//         console.log(events);
+//     }
+//     catch(err) {
+//         console.log(err);
+//     }
+// }
+
 // const trafficCrashesRequest = fetch("https://data.cityofchicago.org/resource/85ca-t3if.json");
 // const serviceRequests = fetch("https://data.cityofchicago.org/resource/v6vf-nfxy.json");
 //
