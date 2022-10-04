@@ -528,3 +528,19 @@ $("#source").on('keyup', function(){
    $("#output").text($("#source").val);
 });
 
+// ======================= DOM warm-ups 10/04/2020 ============================//
+
+// When the mouse enters the h2 with the text "Lorem Generator", A paragraph contains lorem appears in the div with the id of loremParagraphs.
+
+const lorem = <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquam consequuntur ea et eum libero nam natus nobis, provident quidem, voluptate. Commodi doloremque eos facere id optio qui? Magnam!</p>
+
+$("h2").mouseenter(function(){
+    $("#loremParagraphs").append(lorem);
+});
+
+
+// When the user clicks on the "Hot Pink It" button, all the text in the div with the id of loremParagraphs becomes hotpink if it's black, or black if it's hotpink.
+
+$("#hotPinkIt").on('click', function(){
+    $("#loremParagraphs").toggleClass('hotpink');
+});
