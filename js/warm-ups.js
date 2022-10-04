@@ -518,12 +518,13 @@ $('button').on('click', function(){
     $('h1').text("I pwn the DOM");
 });
 
-document.getElementById("button")[0].addEventListener('click', function(e){
-   document.getElementsByName("h1")[0].innerHTML = "I pwn the DOM"
-});
+// document.getElementsByTagName("button")[0].addEventListener('click', function(e){
+//    document.getElementsByTagName("h1")[0].innerHTML = "I pwn the DOM"
+// });
 
 // ============ Second Question =================//
 
 $("#source").on('keyup', function(){
    $("#output").text($("#source").val);
 });
+
