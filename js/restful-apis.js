@@ -48,4 +48,52 @@ function getBooks(){
 
 getBooks();
 
-fetch(booksURL, postOptions).then(getBooks);
+// fetch(booksURL, postOptions).then(getBooks);
+
+//The U in CRUD: Updating with PUT and PATCH requests
+//We'll use PUT to replace the entire content
+//We'll use PATCH to modify only part of the entry
+
+let modification = {
+    title: "Eleanor of Aquitaine: Queen of France, Queen of England"
+}
+
+const patchOptions = {
+    method: 'PATCH',
+    headers: {
+        'Content-Type' : 'application/json'
+    },
+    body: JSON.stringify(modification)
+}
+
+// fetch(booksURL + "/1", patchOptions).then(getBooks);
+
+modification = {
+    title: "Eleanor of Aquitaine: and the Four Kings",
+    author: {
+        firstName: "Amy",
+        lastName: "Kelly"
+    }
+}
+
+const putOptions = {
+    method: 'PUT',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(modification)
+
+}
+
+fetch(booksURL + "/1", putOptions).then(getBooks);
+
+// The D IN CRUD -- Delete
+
+const deleteOptions = {
+    method: 'DELETE',
+    headers: {
+        'Content-Type' : 'application/json'
+    }
+}
+
+fetch(booksURL + "/1", deleteOptions).then(getBooks);
